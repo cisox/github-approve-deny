@@ -1,12 +1,9 @@
 // ==UserScript==
-// @name Github Approval System
-// @namespace http://www.formstack.com/github-approval
-// @description Automate Github Pull Request comments with Approve/Deny buttons
+// @name GitHub Approve/Deny
+// @namespace http://github.com/cisox/github-approve-deny
+// @description Adds Approve and Deny buttons to GitHub pull requests and parses pull request comments for Approve/Deny text.
 // @include https://github.com/*/*/pull/*
 // ==/UserScript==
-
-//<p>+1 Approve</p>
-//<p>-1 Deny</p>
 
 var comments = document.getElementsByClassName('js-comment-body');
 for (var idx = 0; idx < comments.length; idx++) {
