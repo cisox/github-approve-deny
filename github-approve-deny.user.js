@@ -21,7 +21,7 @@
         if (paragraph.innerHTML.indexOf('+1 Approve') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('+1 Approve', '');
             
-            var approval = document.createElement('div');
+            var approval = document.createElement('h3');
             approval.className = 'state-indicator open js-comment-approved';
             approval.appendChild(document.createTextNode('Approved'));
 
@@ -33,7 +33,7 @@
         } else if (paragraph.innerHTML.indexOf('-1 Deny') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('-1 Deny', '');
             
-            var denial = document.createElement('div');
+            var denial = document.createElement('h3');
             denial.className = 'state-indicator closed js-comment-denied';
             denial.appendChild(document.createTextNode('Denied'));
 
