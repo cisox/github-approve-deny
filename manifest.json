@@ -1,6 +1,7 @@
 {
     "name": "GitHub Approve/Deny",
     "version": "1.0",
+    "manifest_version": 2,
     "description": "Adds Approve and Deny buttons to GitHub pull requests and parses pull request comments for Approve/Deny text.",
     "icons": {
         "128": "github-approve-deny.png"
