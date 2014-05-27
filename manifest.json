@@ -1,6 +1,6 @@
 {
     "name": "GitHub Approve/Deny",
-    "short_name": "GH Approvals"
+    "short_name": "GH Approvals",
     "version": "1.1",
     "manifest_version": 2,
     "description": "Adds Approve and Deny buttons to GitHub pull requests and parses pull request comments for Approve/Deny text.",
