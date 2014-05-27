@@ -6,7 +6,7 @@
 // @match http://github.com/*/*/pull/*
 // @match https://www.github.com/*/*/pull/*
 // @match http://www.github.com/*/*/pull/*
-// @version 1.0
+// @version 1.1
 // @icon https://raw.github.com/cisox/github-approve-deny/master/github.png
 // @downloadURL https://raw.github.com/cisox/github-approve-deny/master/github-approve-deny.user.js
 // @updateURL https://raw.github.com/cisox/github-approve-deny/master/github-approve-deny.user.js
@@ -28,8 +28,9 @@
         if (paragraph.innerHTML.indexOf('+1 Approve') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('+1 Approve', '');
             
-            var approval = document.createElement('h3');
-            approval.className = 'state-indicator open js-comment-approved';
+            var approval = document.createElement('div');
+            approval.className = 'state state-open js-comment-approved';
+            approval.style.width = '100%';
             approval.appendChild(document.createTextNode('Approved'));
 
             if (paragraph.firstChild) {
@@ -40,8 +41,9 @@
         } else if (paragraph.innerHTML.indexOf('-1 Deny') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('-1 Deny', '');
             
-            var denial = document.createElement('h3');
-            denial.className = 'state-indicator closed js-comment-denied';
+            var denial = document.createElement('div');
+            denial.className = 'state state-closed js-comment-denied';
+            denial.style.width = '100%';
             denial.appendChild(document.createTextNode('Denied'));
 
             if (paragraph.firstChild) {
@@ -75,9 +77,10 @@
 
     var approveButton = document.createElement('button');
     approveButton.className = 'button primary js-approve-button';
-    approveButton.style.width = '70px';
+    approveButton.style.width = '86px';
     approveButton.style.padding = '7px';
-    approveButton.tabIndex = 4;
+    approveButton.style.marginTop = '5px';
+    approveButton.tabIndex = 5;
     approveButton.onclick = function(e) {
         commentBody.value = '+1 Approve ' + commentBody.value;
         newCommentForm.submit();
@@ -89,9 +92,10 @@
 
     var denyButton = document.createElement('button');
     denyButton.className = 'button danger js-deny-button';
-    denyButton.style.width = '55px';
+    denyButton.style.width = '61px';
     denyButton.style.padding = '7px';
-    denyButton.tabIndex = 5;
+    denyButton.style.marginTop = '5px';
+    denyButton.tabIndex = 4;
     denyButton.onclick = function(e) {
         commentBody.value = '-1 Deny ' + commentBody.value;
         newCommentForm.submit();
