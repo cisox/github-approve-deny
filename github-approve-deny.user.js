@@ -27,7 +27,7 @@
 
         if (paragraph.innerHTML.indexOf('+1 Approve') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('+1 Approve', '');
-            
+
             var approval = document.createElement('div');
             approval.className = 'state state-open js-comment-approved';
             approval.style.width = '100%';
@@ -40,7 +40,7 @@
             }
         } else if (paragraph.innerHTML.indexOf('-1 Deny') != -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('-1 Deny', '');
-            
+
             var denial = document.createElement('div');
             denial.className = 'state state-closed js-comment-denied';
             denial.style.width = '100%';
@@ -79,7 +79,6 @@
     approveButton.className = 'button primary js-approve-button';
     approveButton.style.width = '86px';
     approveButton.style.padding = '7px';
-    approveButton.style.marginTop = '5px';
     approveButton.tabIndex = 5;
     approveButton.onclick = function(e) {
         commentBody.value = '+1 Approve ' + commentBody.value;
@@ -94,7 +93,6 @@
     denyButton.className = 'button danger js-deny-button';
     denyButton.style.width = '61px';
     denyButton.style.padding = '7px';
-    denyButton.style.marginTop = '5px';
     denyButton.tabIndex = 4;
     denyButton.onclick = function(e) {
         commentBody.value = '-1 Deny ' + commentBody.value;
