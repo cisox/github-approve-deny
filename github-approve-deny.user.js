@@ -76,9 +76,8 @@
     formActions = formActions[0];
 
     var approveButton = document.createElement('button');
-    approveButton.className = 'button primary js-approve-button';
-    approveButton.style.width = '86px';
-    approveButton.style.padding = '7px';
+    approveButton.className = 'btn btn-primary js-approve-button';
+    approveButton.style.marginRight = '5px';
     approveButton.tabIndex = 5;
     approveButton.onclick = function(e) {
         commentBody.value = '+1 Approve ' + commentBody.value;
@@ -90,9 +89,7 @@
     approveButton.appendChild(document.createTextNode('Approve'));
 
     var denyButton = document.createElement('button');
-    denyButton.className = 'button danger js-deny-button';
-    denyButton.style.width = '61px';
-    denyButton.style.padding = '7px';
+    denyButton.className = 'btn js-deny-button';
     denyButton.tabIndex = 4;
     denyButton.onclick = function(e) {
         commentBody.value = '-1 Deny ' + commentBody.value;
