@@ -16,7 +16,7 @@
     var comments = document.getElementsByClassName('js-comment-body');
 
     for (var idx = 0; idx < comments.length; idx++) {
-        if (!comments[idx].children || comments[idx].children.length == 0) {
+        if (!comments[idx].children || comments[idx].children.length === 0) {
             continue;
         }
 
@@ -25,7 +25,7 @@
             continue;
         }
 
-        if (paragraph.innerHTML.indexOf('+1 Approve') != -1) {
+        if (paragraph.innerHTML.indexOf('+1 Approve') !== -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('+1 Approve', '');
 
             var approval = document.createElement('div');
@@ -38,7 +38,7 @@
             } else {
                 paragraph.appendChild(approval);
             }
-        } else if (paragraph.innerHTML.indexOf('-1 Deny') != -1) {
+        } else if (paragraph.innerHTML.indexOf('-1 Deny') !== -1) {
             paragraph.innerHTML = paragraph.innerHTML.replace('-1 Deny', '');
 
             var denial = document.createElement('div');
@@ -55,21 +55,21 @@
     }
 
     var newCommentForm = document.getElementsByClassName('js-new-comment-form');
-    if (!newCommentForm || newCommentForm.length == 0) {
+    if (!newCommentForm || newCommentForm.length === 0) {
         return;
     }
 
     newCommentForm = newCommentForm[0];
 
     var commentBody = newCommentForm.getElementsByClassName('js-comment-field');
-    if (!commentBody || commentBody.length == 0) {
+    if (!commentBody || commentBody.length === 0) {
         return;
     }
 
     commentBody = commentBody[0];
 
     var formActions = newCommentForm.getElementsByClassName('form-actions');
-    if (!formActions || formActions.length == 0) {
+    if (!formActions || formActions.length === 0) {
         return;
     }
 
