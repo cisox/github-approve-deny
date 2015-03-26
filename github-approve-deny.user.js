@@ -102,8 +102,8 @@
 
     var closeButton = formActions.children[1];
 
-    formActions.insertBefore(denyButton, closeButton);
-    formActions.insertBefore(document.createTextNode(' '), closeButton);
     formActions.insertBefore(approveButton, closeButton);
+    formActions.insertBefore(document.createTextNode(' '), closeButton);
+    formActions.insertBefore(denyButton, closeButton);
     formActions.insertBefore(document.createTextNode(' '), closeButton);
 })();
